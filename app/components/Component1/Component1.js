@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import {AppRegistry, Text, View, Button} from 'react-native';
+import {Actions} from 'react-native-router-flux';
 
 export default class Component1 extends Component {
 
@@ -17,14 +18,6 @@ export default class Component1 extends Component {
     message: "Hi There"
   }
 
-  goToComponent2() {
-     this.props.navigation.navigate('Component2', {});
-  }
-
-  goHome() {
-     this.props.navigation.navigate('Home', {});
-  }
-
   render() {
     let name = this.state.showName ? this.state.name : "No Name";
     return (
@@ -33,11 +26,11 @@ export default class Component1 extends Component {
         <Text>{name}</Text>
         <Button
            title="navigate"
-           onPress={() => this.goToComponent2()}>
+           onPress={Actions.component2}>
         </Button>
         <Button
            title="Go Home"
-           onPress={() => this.goHome()}>
+           onPress={Actions.home}>
         </Button>
       </View>
     );

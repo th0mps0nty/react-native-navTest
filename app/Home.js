@@ -55,39 +55,38 @@ export default class Home extends Component {
 
    render() {
       return (
-      <View style={styles.main}>
-         <View style={styles.mainText}>
-            <Text onPress={Actions.component2}>This is Component 1!</Text>
+      <View style={{flex: 1, flexDirection: 'column', justifyContent: 'space-between', alignItems: 'center'}}>
+         <View>
+            <Text
+               style={{position: 'relative', backgroundColor: 'orange'}}
+               onPress={Actions.component1}>This is Component 1!</Text>
          </View>
-         <View style={styles.mainText}>
-            <Text onPress={Actions.component2}>This is Component 2!</Text>
+         <View style={{backgroundColor: 'black'}}>
+            <Text
+               style={{position: 'relative', backgroundColor: 'orange'}}
+               onPress={Actions.component2}>This is Component 2!</Text>
          </View>
-         <View style={styles.mainText}>
-            <Text onPress={Actions.component3}>This is Component 3!</Text>
+         <View>
+            <Text
+               style={{position: 'relative', backgroundColor: 'orange'}}
+               onPress={Actions.component3}>This is Component 3!</Text>
          </View>
-         <View style={styles.mainText}>
-            <Text onPress={Actions.component4}>This is Component 4!</Text>
+         <View>
+            <Text
+               style={{position: 'relative', backgroundColor: 'orange'}}
+               onPress={Actions.component4}>This is Component 4!</Text>
          </View>
-         <View style={styles.mainText}>
-            <Text onPress={Actions.component5}>This is Component 5!</Text>
+         <View>
+            <Text
+               style={{position: 'relative', backgroundColor: 'orange'}}
+               onPress={Actions.component5}>This is Component 5!</Text>
          </View>
-         <View style={styles.mainText}>
-            <Text onPress={Actions.component6}>This is Component 6!</Text>
+         <View>
+            <Text
+               style={{position: 'relative', backgroundColor: 'orange'}}
+               onPress={Actions.component6}>This is Component 6!</Text>
          </View>
       </View>
       )
    }
 };
-
-const styles = StyleSheet.create({
-   main: {
-         flexDirection: 'row',
-         justifyContent: 'center',
-         padding: 15,
-         backgroundColor: '#f4f4f4',
-         marginBottom: 3
-   },
-   mainText: {
-      flex: 1
-   }
-});

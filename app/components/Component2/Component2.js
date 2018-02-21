@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import {AppRegistry, Text, View, StyleSheet, TouchableHighlight, TouchableOpacity} from 'react-native';
+import {Actions} from 'react-native-router-flux';
 
 export default class Component2 extends Component {
 
@@ -11,14 +12,6 @@ constructor(props) {
    }
 }
 
-onPressV1() {
-  this.props.navigation.navigate('Home', {});
-}
-
-onPressV2() {
-  this.props.navigation.navigate('Component3', {});
-}
-
 render() {
   return (
       <View>
@@ -28,17 +21,14 @@ render() {
           <View style={styles.container}>
             <TouchableHighlight
               style={styles.v1}
-              onPress={this.onPressV1()}
-              underlayColor='blue'
-              >
+              onPress={Actions.home}>
               <View>
                 <Text>Go Home</Text>
               </View>
             </TouchableHighlight>
             <TouchableOpacity
-              onPress={this.onPressV2()}
-              style={styles.v2}
-              >
+              onPress={Actions.component3}
+              style={styles.v2}>
               <View>
                 <Text>Component 3</Text>
               </View>
