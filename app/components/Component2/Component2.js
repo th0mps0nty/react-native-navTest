@@ -3,12 +3,20 @@ import {AppRegistry, Text, View, StyleSheet, TouchableHighlight, TouchableOpacit
 
 export default class Component2 extends Component {
 
+constructor(props) {
+   super(props);
+   this.navigateTo = '';
+   this.state = {
+
+   }
+}
+
 onPressV1() {
-  console.log('View 1 Pressed!');
+  this.props.navigation.navigate('Home', {});
 }
 
 onPressV2() {
-  console.log('View 2 Pressed!');
+  this.props.navigation.navigate('Component3', {});
 }
 
 render() {
@@ -20,19 +28,19 @@ render() {
           <View style={styles.container}>
             <TouchableHighlight
               style={styles.v1}
-              onPress={this.onPressV1}
+              onPress={this.onPressV1()}
               underlayColor='blue'
               >
               <View>
-                <Text>View 1</Text>
+                <Text>Go Home</Text>
               </View>
             </TouchableHighlight>
             <TouchableOpacity
-              onPress={this.onPressV2}
+              onPress={this.onPressV2()}
               style={styles.v2}
               >
               <View>
-                <Text>View 2</Text>
+                <Text>Component 3</Text>
               </View>
             </TouchableOpacity>
             <View style={styles.v3}>
