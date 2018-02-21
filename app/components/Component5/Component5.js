@@ -25,7 +25,7 @@ export default class Component5 extends Component {
  }
 
  onPress(user) {
-    console.log(user);
+    alert(user.name_user.username);
 }
 
  renderRow(user, sectionId, rowId, highlightRow) {
