@@ -25,7 +25,7 @@ export default class Component5 extends Component {
  }
 
  onPress(user) {
-    alert(user.name_user.username);
+    alert('Name: ' + user.name + ' Email: ' + user.email + ' Phone #: ' + user.phone);
 }
 
  renderRow(user, sectionId, rowId, highlightRow) {
